@@ -1,0 +1,381 @@
+@media screen and (min-width:1920px) {
+    html {
+    font-size: 134%}
+}@media screen and (min-width:2340px) {
+    html {
+    font-size: 189%}
+}body {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    font-family: arial, sans-serif;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
+.texto a{
+    padding:20px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+.texto a:hover{
+    color: #363636;
+}
+
+.modalTemplate {
+    position: relative;
+    background: #fff;
+    height: 100%}
+.modalTemplate .close {
+    position: fixed;
+    top: .375rem;
+    right: 0;
+    cursor: pointer;
+    padding: 1.25rem;
+}
+@media screen and (min-width:734px) {
+    .modalTemplate .close {
+    right: .625rem;
+    top: 1.1875rem;
+}
+}.modalTemplate .close>svg {
+    width: 16px;
+    height: 16px;
+}
+@media screen and (min-width:734px) {
+    .modalTemplate .close>svg {
+    height: 1.275rem;
+    width: 1.275rem;
+}
+}@media screen and (min-width:1250px) {
+    .modalTemplate .close>svg {
+    fill: #8f25e5;
+}
+}.modalTemplate .modalTemplate-content .modal-block {
+    padding: 1rem 1.25rem;
+}
+@media screen and (min-width:1250px) {
+    .modalTemplate .modalTemplate-content .modal-block {
+    padding: .625rem 6.5rem;
+}
+}.modalTemplate .modalTemplate-content .block .observation .modalButtons {
+    margin: 0;
+}
+@media screen and (min-width:1250px) {
+    .modalTemplate .modalTemplate-content {
+    width: 70%;
+    padding-left: 30%}
+}.modalTemplate header.header {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8f25e5), color-stop(670%, #009df7));
+    background-image: linear-gradient(180deg, #8f25e5, #009df7 670%);
+    background: #8f25e5;
+    padding: .9375rem 1.25rem 1.25rem;
+    margin-top: -20px;
+}
+@media screen and (max-width:1249px) {
+    .modalTemplate header.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+}@media screen and (min-width:1250px) {
+    .modalTemplate header.header {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8f25e5), color-stop(370%, #009df7));
+    background-image: linear-gradient(180deg, #8f25e5, #009df7 370%);
+    width: 25%;
+    padding: 7.5rem 3.125rem 3.75rem;
+    position: fixed;
+    height: 100%;
+    margin-top: -20px;
+}
+}.modalTemplate header.header .logo {
+    width: 100%}
+.modalTemplate header.header .logo:after {
+    content: "";
+    width: 100%;
+    display: block;
+    opacity: .5;
+}
+@media screen and (min-width:1249px) {
+    .modalTemplate header.header .logo:after {
+    display: none;
+}
+}.modalTemplate header.header .logo>svg {
+    margin-bottom: 1.5rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    fill: #fff;
+}
+.modalTemplate header.header .logo>svg .oi {
+    fill: transparent;
+}
+@media screen and (min-width:734px) {
+    .modalTemplate header.header .logo>svg {
+    height: 3.75rem;
+    width: 3.9375rem;
+    margin-bottom: 1.8rem;
+}
+}.modalTemplate header.header .titleIcon {
+    display: none;
+}
+@media screen and (min-width:1250px) {
+    .modalTemplate header.header .titleIcon {
+    display: block;
+}
+.modalTemplate header.header .titleIcon>svg {
+    width: 13.625rem;
+    height: 5.0625rem;
+    fill: #fff;
+}
+}.modalTemplate header.header h2 {
+    color: #fff;
+    font-size: 1.125rem;
+    line-height: 1em;
+    font-family: arial, sans-serif;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    white-space: pre-line;
+}
+@media screen and (min-width:734px) {
+    .modalTemplate header.header h2 {
+    font-size: 2.1875rem;
+    letter-spacing: -.022em;
+    margin-top: 1rem;
+}
+}@media screen and (min-width:1024px) {
+    .modalTemplate header.header h2 {
+    font-size: 2.4rem;
+    letter-spacing: -.04em;
+    line-height: 1em;
+    font-size: 3.56rem;
+}
+}.modalTemplate header.header .modalTemplate-subtitle {
+    font-family: arial, sans-serif;
+    font-size: .75rem;
+    color: #fff;
+}
+.modalTemplate .offersLine {
+    margin-top: 8.125rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 2.0625rem;
+    padding-bottom: 2.0625rem;
+    border-top: .03125rem solid #c789f4;
+    border-bottom: .03125rem solid #c789f4;
+}
+@media screen and (max-width:1248px) {
+    .modalTemplate .offersLine {
+    display: none;
+}
+}@media screen and (min-width:1249px) {
+    .modalTemplate .offersLine {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+}.modalTemplate .offersLine h4 {
+    font-size: 1.3125rem;
+    color: #fff;
+}
+.modalTemplate .offersLine p {
+    font-size: .8125rem;
+}
+.modalTemplate .offersLine .colunm {
+    width: 50%}
+.modalTemplate .offersLine .colunm:nth-child(2) {
+    text-align: right;
+}
+.modalTemplate .offersLine .row {
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    width: 100%}
+.modalTemplate .offersLine .onlyText p {
+    font-size: 1.3125rem;
+    color: #fff;
+}
+.modalTemplate .rowMobile {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.modalTemplate .rowMobile h4 {
+    font-size: 1.125rem;
+    color: #fff;
+}
+@media screen and (min-width:734px) {
+    .modalTemplate .rowMobile h4 {
+    font-size: 2.1875rem;
+    margin-top: 1rem;
+}
+}@media screen and (min-width:1249px) {
+    .modalTemplate .rowMobile {
+    display: none;
+}
+}@media screen and (min-width:1250px) {
+    .modalTemplate.layout-20-80 .modalTemplate-content {
+    width: 77%;
+    padding-left: 23%}
+.modalTemplate.layout-20-80 header.header {
+    width: 23%}
+}
+.modalTemplate.modalType__oiPink .close>svg {
+    fill: #c72177;
+}
+.modalTemplate.modalType__oiPink header.header {
+    background-color: #c72177;
+    background-image: none;
+}
+.modalTemplate.modalType__oiGreen .close>svg {
+    fill: #00d213;
+}
+.modalTemplate.modalType__oiGreen header.header {
+    background-color: #00d213;
+    background-image: linear-gradient(15deg, #ccdd31, #49b859 37%, #40c0bc);
+}
+.modalTemplate.modalType__oiGreen .modal-list-contract .offer-rules-content .list-wrapper-rules .list-links ul li a:hover {
+    color: #00d213;
+    border-color: #00d213;
+}
+.modalTemplate.modalType__oiOrange .close>svg {
+    fill: #fe6b03;
+}
+.modalTemplate.modalType__oiOrange header.header {
+    background-color: #fe6b03;
+    background-image: linear-gradient(343deg, #fe6b03, #e33465);
+}
+.modalTemplate.modalType__oiOrange .modal-list-contract .list-wrapper-rules:first-child, .modalTemplate.modalType__oiOrange .offer-rules-content .list-wrapper-rules:first-child {
+    border-top: .0625rem solid #fe6b03;
+}
+.modalTemplate.modalType__oiOrange .modal-list-contract .list-wrapper-rules .list-links ul li a:hover, .modalTemplate.modalType__oiOrange .offer-rules-content .list-wrapper-rules .list-links ul li a:hover {
+    color: #fe6b03;
+    border-color: #fe6b03;
+}
+.icon {
+    display: inline-block;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: .1em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.icon>svg {
+    width: 100%;
+    height: 100%;
+    fill: #ffefd5;
+    stroke: tomato;
+}
+.ge-modal-content .modalTemplate.header h2, .ge-modal-content .modalTemplate header h2 {
+    font-size: 2.5rem;
+    padding: 0;
+}
+.ge-modal-content .ge-subtitle {
+    font-size: 1.3125rem;
+    font-family: arial, sans-serif;
+    color: #8f25e5;
+    text-transform: uppercase;
+}
+.ge-modal-content h1 {
+    font-size: 2.5rem;
+    font-family: arial, sans-serif;
+    padding-top: 0;
+}
+.ge-modal-content .ge-list {
+    border-top: .125rem solid #8f25e5;
+    margin-top: 2.75rem;
+    padding-top: 2.75rem;
+}
+.ge-modal-content .ge-list li {
+    border-bottom: .0625rem solid #dbdbdb;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+.ge-modal-content .ge-list li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.ge-modal-content .ge-list li h4 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+    color: #222;
+    white-space: pre-line;
+}
+.ge-modal-content .ge-list li p {
+    color: #909090;
+    line-height: 1.4em;
+    white-space: pre-line;
+    margin-bottom: .625rem;
+    text-decoration: none;
+}
+.ge-modal-content .ge-list li a p {
+    color: #909090;
+    text-decoration: underline;
+}
+.ge-modal-content .ge-list li a p:hover{
+    color: #8f25e5;
+}
+@media screen and (min-width:734px) {
+    .ge-modal-content h1 {
+    font-size: 3.5625rem;
+}
+.ge-modal-content .ge-list {
+    padding-top: 6.25rem;
+}
+.ge-modal-content .ge-list li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.ge-modal-content .ge-list li h4 {
+    min-width: 12.5rem;
+}
+.ge-modal-content .ge-list li span {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+  
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+
+}@media screen and (min-width:1024px) {
+    .ge-modal-content .ge-list li h4 {
+    min-width: 17.5rem;
+}
+}@media screen and (min-width:1250px) {
+    .ge-modal-content .modalTemplate .modal-block {
+    padding-top: 9.6875rem;
+}
+.ge-modal-content h1 {
+    padding-top: 0;
+}
+}
+
+
+
+
+
+
+
+
