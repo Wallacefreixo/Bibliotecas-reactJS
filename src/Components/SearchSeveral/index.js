@@ -46,6 +46,8 @@ export default class SearchSeveral extends Component {
         dense:  false,
         rowsPerPage:  5,
         displayIcon: 'display-button-false',
+        dadoSelecionado: false,
+        buttonActive: 0,
      };
       
      //Aqui vai dados ou api 
@@ -139,11 +141,15 @@ export default class SearchSeveral extends Component {
         this.setState({page:0})
       };
       adicionaBotao = () =>{
-          this.setState({displayIcon: 'display-button-true '})
+          this.setState({displayIcon: 'display-button-true', dadoSelecionado: true})
+      }
+      //atualiza state de acordo com o index selecionado
+      setActiveButton(index){
+        this.setState({'buttonActive': index})
       }
 
       render() {
-        const { filter, data, rowsPerPage, page,dense, order, orderBy, displayIcon, visible} = this.state;
+        const { filter, data, rowsPerPage, page,dense, order, orderBy, displayIcon, visible, buttonActive} = this.state;
 
         let tabela = visible;
         //converter o valor presente no filter antes de renderizar os dados na tela
@@ -162,9 +168,24 @@ export default class SearchSeveral extends Component {
         //calcula as linhas por página para fazer páginação
         const emptyRows = rowsPerPage - Math.min(rowsPerPage, data.length - page * rowsPerPage);
 
-       
+
+       // retorna name da classe + active para o número do index relacionado
+       var current = buttonActive;
+       var getClass = function( name, index){
+         if(index === current)
+            return name + ' active';
+         return name;
+       }
+
         return (
             <div className="search-several-container">
+            
+            {/*grupo de botoes pegando pelo index*/}
+            <div className="ButtonGroup">
+              <button href="#" onClick={this.setActiveButton.bind(this, 0)} className={getClass("buttonNegocios", 0)}>Negócios</button>
+              <button href="#" onClick={this.setActiveButton.bind(this, 1)} className={getClass("buttonPessoas", 1)}>Pessoas</button>
+            </div>
+
             <div class="search-several-input-wrapper">
                   <FontAwesomeIcon icon={faSearch} className="search-several-input-icon" />
                   <input type="text" className="search-several-input-text" value={filter} onChange={this.handleChangeInput} placeholder="Pesquise por nome, endereço, bairro, cidade, uf"  />
@@ -190,10 +211,12 @@ export default class SearchSeveral extends Component {
                                       <div>
                                           {row.nome}
                                       </div>
-                                      <button className="button-telefone" onMouseEnter={this.adicionaBotao}>
-                                            <FontAwesomeIcon icon={faArrowRight} className={displayIcon}/>
-                                            <p>{row.telefone}</p>    
-                                      </button> 
+                                      <div>
+                                        <button className="button-telefone" onMouseEnter={this.adicionaBotao}>
+                                          <FontAwesomeIcon icon={faArrowRight} className={displayIcon}/>
+                                          <p>{row.telefone}</p>
+                                        </button>
+                                      </div>
                                   </div>
                                   <div className="info-location">
                                       <FontAwesomeIcon icon={faMapMarkerAlt} className="icon-location" />
