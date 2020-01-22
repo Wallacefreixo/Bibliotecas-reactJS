@@ -70,17 +70,13 @@
     padding-right:25px;
     color: #000;
     background-color: #fff;
-    width: 180px;
+    width: 210px;
     border: none;
     outline: 0;
     cursor: pointer;
     display: flex;
 }
-.button-telefone:hover{
-    background-color: dodgerblue;
-    color: #fff;
-    cursor: pointer;
-}
+
 .display-button-false{
     display: none;
 }
@@ -92,7 +88,7 @@
 }
 .info-location{
     display: flex;
-    
+
 }
 .info-text-location{
     color: rgb(105, 105, 105);
@@ -104,4 +100,15 @@
 .MuiPaper-root{
     width:100%;
     margin-top:30px;
+}
+.content-telefone{
+    display: flex;
+    padding-left: 30px;
+    background-color: aqua;
+    padding-right:30px;
+}
+.content-telefone:hover{
+    background-color: dodgerblue;
+    color: #fff;
+    cursor: pointer;
 }

@@ -9,7 +9,7 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faMapMarkerAlt} from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faMapMarkerAlt, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 
 
 //Funções de ordenação em ordem alfabética
@@ -191,8 +191,8 @@ export default class SearchSeveral extends Component {
                                           {row.nome}
                                       </div>
                                       <button className="button-telefone" onMouseEnter={this.adicionaBotao}>
-                                          <FontAwesomeIcon icon={faMapMarkerAlt} className={displayIcon} />
-                                          <p>{row.telefone}</p>
+                                            <FontAwesomeIcon icon={faArrowRight} className={displayIcon}/>
+                                            <p>{row.telefone}</p>    
                                       </button> 
                                   </div>
                                   <div className="info-location">
