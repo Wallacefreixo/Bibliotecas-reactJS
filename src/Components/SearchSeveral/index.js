@@ -231,10 +231,15 @@ export default class SearchSeveral extends Component {
 
         return (
           <div className="container">
-
-         
-            <div className="search-several-container">
-            
+          <div className="search-several-container">
+              <div className="header">
+              <div className="logo">
+                <p>Projeto 102</p>
+              </div>
+              <div className="user-login">
+              </div>
+            </div>
+            <div className="search-several-selecaoDados">
             <div className="SelecaoDados">
                 {/*grupo de botoes pegando pelo index*/}
                 <div className="ButtonGroup">
@@ -326,6 +331,7 @@ export default class SearchSeveral extends Component {
             </Paper>                
            ) : null
          }
+          </div>
           </div>
           </div>
         );
