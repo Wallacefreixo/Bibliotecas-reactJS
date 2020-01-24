@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
+import Fuse from 'fuse.js';
 
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -10,7 +11,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faMapMarkerAlt, faArrowRight} from "@fortawesome/free-solid-svg-icons";
-
 
 //Funções de ordenação em ordem alfabética
 function desc(a, b, orderBy) {
@@ -48,6 +48,7 @@ export default class SearchSeveral extends Component {
         displayIcon: 'display-button-false',
         dadoSelecionado: false,
         buttonActive: 0,
+        switchValue: false,
      };
       
      //Aqui vai dados ou api 
@@ -62,7 +63,31 @@ export default class SearchSeveral extends Component {
               telefone: "21 0000-0000",
             },
             {
-              nome: "Arthur",
+              nome: "McDonald´s",
+              endereco: "Rua nova",
+              bairro: "Maceió",
+              cidade: "Niteroi",
+              uf:"RJ",
+              telefone: "21 0000-0000",
+            },
+            {
+              nome: "Bob´s",
+              endereco: "Rua nova",
+              bairro: "Maceió",
+              cidade: "Niteroi",
+              uf:"RJ",
+              telefone: "21 0000-0000",
+            },
+            {
+              nome: "Washigton",
+              endereco: "Rua 2",
+              bairro: "Trevo",
+              cidade: "São Paulo",
+              uf:"SP",
+              telefone: "21 0000-0000",
+            },
+            {
+              nome: "Avenida Presidente Vargas",
               endereco: "Rua 2",
               bairro: "Trevo",
               cidade: "São Paulo",
@@ -147,19 +172,46 @@ export default class SearchSeveral extends Component {
       setActiveButton(index){
         this.setState({'buttonActive': index})
       }
-
+      handleChangeSwitch = () =>{
+        if(this.state.switchValue === false){
+            this.setState({switchValue: true})
+        }
+        else{
+          this.setState({switchValue: false})
+        }
+      }
+      
       render() {
-        const { filter, data, rowsPerPage, page,dense, order, orderBy, displayIcon, visible, buttonActive} = this.state;
+        const { filter, data, rowsPerPage, page,dense, order, orderBy, displayIcon, visible, buttonActive, switchValue} = this.state;
 
         let tabela = visible;
+        let filteredData;
+
         //converter o valor presente no filter antes de renderizar os dados na tela
-        const lowercasedFilter = filter.toLowerCase();
-        //converter o array de data tb em minusculo e compara com o valor na váriavel filter 
-        let filteredData = data.filter(item => {
-            return Object.keys(item).some(key =>
-              item[key].toLowerCase().includes(lowercasedFilter)
-            );
-          });
+        
+        // const lowercasedFilter = filter.toLowerCase();
+        // filteredData = data.filter(item => {
+        //     return Object.keys(item).some(key =>
+        //       item[key].toLowerCase().includes(lowercasedFilter)
+        //     );
+        //   });
+          
+          
+        var options = {
+          shouldSort: true,
+          threshold: 0.4,
+          location: 0,
+          distance: 10,
+          maxPatternLength: 100,
+          minMatchCharLength: 3,
+          keys: [
+            "nome"
+          ]
+        };
+        var fuse = new Fuse(data, options); // "list" is the item array
+
+        filteredData = fuse.search(filter)
+
         //limpa o campo se o usuário apagar o value do input e oculta tabela
         if(!filter.length>0){
             filteredData=[];
@@ -178,13 +230,36 @@ export default class SearchSeveral extends Component {
        }
 
         return (
+          <div className="container">
+
+         
             <div className="search-several-container">
             
-            {/*grupo de botoes pegando pelo index*/}
-            <div className="ButtonGroup">
-              <button href="#" onClick={this.setActiveButton.bind(this, 0)} className={getClass("buttonNegocios", 0)}>Negócios</button>
-              <button href="#" onClick={this.setActiveButton.bind(this, 1)} className={getClass("buttonPessoas", 1)}>Pessoas</button>
+            <div className="SelecaoDados">
+                {/*grupo de botoes pegando pelo index*/}
+                <div className="ButtonGroup">
+                   <button href="#" onClick={this.setActiveButton.bind(this, 0)} className={getClass("buttonNegocios", 0)}>Negócios</button>
+                   <button href="#" onClick={this.setActiveButton.bind(this, 1)} className={getClass("buttonPessoas", 1)}>Pessoas</button>
+                </div>
+
+                <div className="regiao">
+                  <p>Região</p>
+                  <div className="regiao-opcoes">
+                     <p className="titulo-opcoes-regiao">21 Rio de Janeiro /RJ</p>
+                     <input checked={switchValue}
+                            onChange={this.handleChangeSwitch}
+                            className="react-switch-checkbox"
+                            id={`react-switch-new`}
+                            type="checkbox" />
+                            <label style={{background: switchValue && 'dodgerblue'}}
+                                   className="react-switch-label"
+                                   htmlFor={`react-switch-new`} >
+                              <span className={`react-switch-button`} />
+                            </label> Todas
+                  </div>
+                </div>
             </div>
+            
 
             <div class="search-several-input-wrapper">
                   <FontAwesomeIcon icon={faSearch} className="search-several-input-icon" />
@@ -251,6 +326,7 @@ export default class SearchSeveral extends Component {
             </Paper>                
            ) : null
          }
+          </div>
           </div>
         );
       }
