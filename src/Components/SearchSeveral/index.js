@@ -10,7 +10,7 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faMapMarkerAlt, faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faMapMarkerAlt, faArrowRight, faUser} from "@fortawesome/free-solid-svg-icons";
 
 //Funções de ordenação em ordem alfabética
 function desc(a, b, orderBy) {
@@ -71,8 +71,16 @@ export default class SearchSeveral extends Component {
               telefone: "21 0000-0000",
             },
             {
-              nome: "Bob´s",
-              endereco: "Rua nova",
+              nome: "bobs",
+              endereco: "nova rua",
+              bairro: "Maceió",
+              cidade: "Niteroi",
+              uf:"RJ",
+              telefone: "21 0000-0000",
+            },
+            {
+              nome: "bobs",
+              endereco: "teste",
               bairro: "Maceió",
               cidade: "Niteroi",
               uf:"RJ",
@@ -199,13 +207,19 @@ export default class SearchSeveral extends Component {
           
         var options = {
           shouldSort: true,
+          matchAllTokens: true,
+          findAllMatches: true,
           threshold: 0.4,
           location: 0,
-          distance: 10,
+          distance: 100,
           maxPatternLength: 100,
           minMatchCharLength: 3,
           keys: [
-            "nome"
+            "nome",
+            "endereco",
+            "uf",
+            "bairro",
+            "cidade"
           ]
         };
         var fuse = new Fuse(data, options); // "list" is the item array
@@ -234,9 +248,16 @@ export default class SearchSeveral extends Component {
           <div className="search-several-container">
               <div className="header">
               <div className="logo">
-                <p>Projeto 102</p>
+              <svg width="40" height="58" viewBox="0 0 55 58" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="112.738%" y1="110.801%" x2="4.03%" y2="31.582%" id="a">
+  <stop stop-color="#FF0" offset="0%"/><stop stop-color="#FF6D00" offset="41.941%"/><stop stop-color="#EA288C" offset="100%"/></linearGradient></defs><g fill="none"><path d="M27.077 57.473c7.427 1.423 18.374.416 18.374-12.323 0-20.46 15.42-23.53 6.832-35.89C41.887-5.702 6.785-2.375 1.15 19.546c-5.007 19.42 8.573 34.599 25.926 37.928z" fill="url(#a)"/><path d="M36.235 23.29a2.597 2.597 0 0 0 2.402-1.585 2.558 2.558 0 0 0-.559-2.807 2.613 2.613 0 0 0-2.83-.561 2.574 2.574 0 0 0-1.605 2.376 2.56 2.56 0 0 0 .757 1.821 2.606 2.606 0 0 0 1.835.756zm.032 1.906c-1.457 0-2.646 3.44-2.646 7.684s1.192 7.683 2.643 7.683c1.45 0 2.642-3.438 2.642-7.683 0-4.244-1.178-7.684-2.642-7.684h.003zm-11.787-.008c-4.345 0-7.235 3.41-7.235 7.684s2.89 7.686 7.235 7.686c4.346 0 7.223-3.406 7.223-7.686 0-4.28-2.888-7.684-7.223-7.684zm0 11.744c-1.992 0-3.095-2.03-3.095-4.088 0-2.057 1.103-4.029 3.095-4.029 1.993 0 3.088 1.974 3.088 4.03 0 2.054-1.095 4.09-3.088 4.09v-.003z" fill="#FFF"/></g></svg>
+                <p className="tituloprojeto">PROJETO 102</p>
               </div>
               <div className="user-login">
+              <FontAwesomeIcon icon={faUser} className="iconUser"/>
+                <div className="user-login-user">
+                <p className="titulocliente">CLIENTE SOLICITANTE</p>
+                <p className="titulotelefone">21 9 0000-6655</p>
+                </div>
               </div>
             </div>
             <div className="search-several-selecaoDados">
