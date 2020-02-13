@@ -285,8 +285,6 @@ export default class SearchSeveral extends Component {
                   </div>
                 </div>
             </div>
-            
-
             <div class="search-several-input-wrapper">
                   <FontAwesomeIcon icon={faSearch} className="search-several-input-icon" />
                   <input type="text" className="search-several-input-text" value={filter} onChange={this.handleChangeInput} placeholder="Pesquise por nome, endereço, bairro, cidade, uf"  />

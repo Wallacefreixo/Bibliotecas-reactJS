@@ -1,0 +1,270 @@
+
+em {
+    font-style: normal;
+}
+
+.search-several-container{
+    margin: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.search-several-selecaoDados{
+    width: 60%;
+    margin-top: -30px;
+}
+.header{
+    margin-bottom:50px;
+    margin-top: -50px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.paginacao{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 30px 10px 30px;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+}
+.tituloprojeto{
+    padding-left: 20px;
+    color:#a7a5a5;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.user-login{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.iconUser{
+    background-color:#ddd;
+    border: 16px solid #ddd;
+    border-radius: 30px;
+    box-sizing: unset;
+}
+.titulocliente{
+    font-size:10px;
+}
+.titulotelefone{
+    padding-top: 2px;
+    font-size:20px;
+    font-weight: bolder;
+}
+.user-login-user{
+    padding-left: 5px;
+    color: #a7a5a5;
+    
+}
+.search-several-input-wrapper{
+    position: relative;
+    margin-top: 25px;
+    display: flex;
+
+}
+.search-several-input-icon{
+    position: absolute;
+    padding-left: 10px;
+    left: 3px;
+    color: rgb(170, 170, 170);
+    top: calc(50% - 0.5em); /* mantém icone no centro do input, independente da altura do input*/
+    box-sizing: unset;
+}
+  
+  .search-several-input-text{
+    margin-top:0;
+    padding-left: 40px;
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    outline: 0;
+  }
+.search-several-cancel{
+    background: none;
+    border: none;
+    outline: 0;
+    color: dodgerblue;
+    font-size:15px;
+    margin-top:-5px;
+    cursor:pointer;
+}
+.search-several-cancel:hover{
+    opacity: 0.8;
+}
+.search-several-result{
+    margin-top:20px;
+    border: 2px solid #ddd;
+    padding:20px;
+}
+.resultado{
+    margin-top: 20px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+.titulo-result{
+    border-bottom: 2px solid #ddd;
+    padding-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.content-info{
+    padding:20px 0 20px 0;
+    border-bottom: 1px solid #ddd;
+    padding-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.usuarios-info{
+    font-weight: bolder;
+    padding-bottom:2px;
+    display: flex;
+    justify-content: space-between;
+}
+.button-telefone{
+    color:#000;
+
+}
+.button-telefone{
+    font-size:20px;
+    padding-right:25px;
+    color: #000;
+    background-color: #fff;
+    width: 190px;
+    height: 35px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+.button-telefone:hover{
+    background-color: dodgerblue;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.display-button-false{
+    display: none;
+}
+.display-button-true{
+    color: #fff;
+    margin-right: 10px;
+}
+.icon-location{
+    width: 10px;
+}
+.info-location{
+    display: flex;
+    margin-top:-10px;
+}
+.info-text-location{
+    color: rgb(105, 105, 105);
+    padding-left:5px;
+}
+.location-text-outros{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.location-text-endereco{
+    padding-right: 5px;
+}
+.buttonNegocios{
+    color: dodgerblue;
+    background-color: #fff;
+    border: 1px solid dodgerblue;
+    width: 130px;
+    height: 30px;
+    outline: 0;
+    cursor: pointer;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.buttonPessoas{
+    color: dodgerblue;
+    background-color: #fff;
+    border: 1px solid dodgerblue;
+    width: 130px;
+    height: 30px;
+    outline: 0;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.active{
+    background-color: dodgerblue;
+    color:#fff;
+}
+.SelecaoDados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.regiao{
+    font-size:14px;
+}
+.regiao-opcoes{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+.titulo-opcoes-regiao{
+    padding-right: 10px;
+}
+.react-switch-checkbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  .react-switch-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 100px;
+    position: relative;
+    margin-right:10px;
+    transition: background-color .2s;
+  }
+  
+  .react-switch-label .react-switch-button {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 17px;
+    height:17px;
+    border-radius: 45px;
+    transition: 0.2s;
+    background: #fff;
+    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+  }
+  
+  .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+  }
+  
+  .react-switch-label:active .react-switch-button {
+    width: 20px;
+  }

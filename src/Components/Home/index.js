@@ -10,6 +10,8 @@ export default class Home extends Component {
             <ul className="lista">
                 <li><Link to="/Search">Busca API</Link></li>
                 <li><Link to="/SearchSeveral">Busca com json</Link></li>
+                <li><Link to="/ElasticSearch">ElasticSearch</Link></li>
+                <li><Link to="/Atalhos">Atalhos</Link></li>
                 <li><Link to="/MenuResponsive">Menu Responsivo</Link></li>
                 <li><Link to="/Modal">Modal</Link></li>
                 <li><Link to="/Teste">Teste</Link></li>
