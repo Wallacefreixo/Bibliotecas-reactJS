@@ -1,13 +1,13 @@
 [
     {
       "codigo": "teste",
-      "categoria": "produtos",
-      "titulo": "Torres",
-      "subtitulo": "Compartilhamento de Infraestrutura​ ",
-      "funcionamento": "Compartilhamento de infraestrutura relativa à capacidade excedente da Infraestrutura das Torres, integrantes da rede de suporte à prestação do Serviço Telefônico Fixo Comutado na modalidade local ou longa distância da TELEMAR NORTE LESTE S.A. na Região I do PGO e da Oi S.A. na Região II do PGO ou do Serviço Móvel Pessoal (SMP) da Oi MÓVEL S.A. nas Regiões I, II e III do PGO, para uso da solicitante, sem implicar na transferência de propriedade, controle ou gestão da infraestrutura cedida, que permanece sob domínio exclusivo da Oi.​",
-      "destino": "Produto destinado às prestadoras de serviço de telecomunicações de interesse coletivo outorgadas pela Anatel.",
-      "servico": "As solicitações do Serviço deverão ser feitas diretamente ao Gerente de Relacionamento (GR) que atende a Solicitante.",
-      "info": "Compartilhamento de Infraestrutura - Torres",
-      "url": "../../pdf/Compartilhamento de Infraestrutura_Torres.zip"
+      "categoria": "categoria",
+      "titulo": "titulo",
+      "subtitulo": "subtitulo​ ",
+      "funcionamento": "funcionamento​",
+      "destino": "destino",
+      "servico": "servico",
+      "info": "info",
+      "url": "Link url"
     }
 ]
